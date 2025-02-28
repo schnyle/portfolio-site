@@ -9,6 +9,7 @@ import bash_img from '../assets/technologies/bash.png'
 import c_img from '../assets/technologies/c.png'
 import cmake_img from '../assets/technologies/cmake.png'
 import cpp_img from '../assets/technologies/cpp.png'
+import css_img from '../assets/technologies/css.png'
 import dynamodb_img from '../assets/technologies/dynamodb.png'
 import github_img from '../assets/technologies/github2.png';
 import html_img from '../assets/technologies/html.png';
@@ -27,6 +28,14 @@ import redux_img from '../assets/technologies/redux.png'
 import s3_img from '../assets/technologies/s3.png'
 import typescript_img from "../assets/technologies/typescript.png"
 import vscode_img from '../assets/technologies/vscode.png'
+import node_img from '../assets/technologies/node.png'
+import cloudformation_img from '../assets/technologies/cloudformation.png'
+import sql_img from '../assets/technologies/database.png'
+import nosql_img from '../assets/technologies/nosql.png'
+import linux_img from '../assets/technologies/linux.png'
+import tmux_img from '../assets/technologies/tmux.png'
+import scipy_img from '../assets/technologies/scipy.png'
+import chartjs_img from '../assets/technologies/chartjs.png'
 
 const gridItem = (name, path) => {
   return (
@@ -57,6 +66,39 @@ const gridItem = (name, path) => {
   );
 };
 
+const gridElements = [
+  // frontend
+  { label: "TypeScript", img: typescript_img },
+  { label: "React", img: react_img },
+  { label: "Redux", img: redux_img },
+  { label: "HTML", img: html_img },
+  { label: "CSS", img: css_img },
+  // backend
+  { label: "NodeJS", img: node_img },
+  { label: "Python", img: python_img },
+  { label: "C++", img: cpp_img },
+  { label: "AWS Lambda", img: lambda_img },
+  { label: "AWS Cloudformation", img: cloudformation_img },
+  // databases
+  { label: "PostgreSQL", img: postgresql_img },
+  { label: "DynamoDB", img: dynamodb_img },
+  { label: "RDS", img: rds_img },
+  { label: "SQL", img: sql_img },
+  { label: "NoSQL", img: nosql_img },
+  // dev tools
+  { label: "Git", img: github_img },
+  { label: "VS Code", img: vscode_img },
+  { label: "Linux", img: linux_img },
+  { label: "Tmux", img: tmux_img },
+  { label: "Postman", img: postman_img },
+  // data analysis
+  { label: "NumPy", img: numpy_img },
+  { label: "SciPy", img: scipy_img },
+  { label: "Pandas", img: pandas_img },
+  { label: "Matplotlib", img: matplotlib_img },
+  { label: "ChartJS", img: chartjs_img }
+];
+
 function Skills() {
   return (
     <Container
@@ -79,82 +121,13 @@ function Skills() {
       </Typography>
       <Box sx={{ display: 'flex', justifyContent: 'center' }}>
         <Grid container spacing={4}>
-          {/* Change all Grid items to use xs={2.4} */}
-          <Grid item xs={2.4}>
-            {gridItem('JavaScript', javascript_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('TypeScript', typescript_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('React', react_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('Redux', redux_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('HTML & CSS', html_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('Python', python_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('Matplotlib', matplotlib_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('NumPy', numpy_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('Pandas', pandas_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('Python typing', python_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('AWS', aws_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('Lambda', lambda_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('DynamoDB', dynamodb_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('RDS', rds_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('S3', s3_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('GitHub', github_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('PostgreSQL', postgresql_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('Bash', bash_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('VS Code', vscode_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('Postman', postman_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('C++', cpp_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('C', c_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('CMake', cmake_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('OOP', oop_img)}
-          </Grid>
-          <Grid item xs={2.4}>
-            {gridItem('STL', cpp_img)}
-          </Grid>
+          {gridElements.map(ele => {
+            return (
+              <Grid item xs={2.4}>
+                {gridItem(ele.label, ele.img)}
+              </Grid>
+            )
+          })}
         </Grid>
       </Box>
     </Container>

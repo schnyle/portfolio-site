@@ -14,54 +14,54 @@ import github_img from '../assets/github.png';
 import linkedin_img from '../assets/linkedin.png';
 
 const navLink = (toId, text) => {
-    return (
-      <ScrollLink
-        to={toId}
-        spy={true}
-        smooth={true}
-        offset={-70}
-        duration={500}
-        onClick={() => {
-          if (window.location.pathname !== '/') {
-            window.location.href = '/#' + toId;
-            setTimeout(() => {
-              const element = document.getElementById(toId);
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-              }
-            }, 100);
-          }
-        }}        
+  return (
+    <ScrollLink
+      to={toId}
+      spy={true}
+      smooth={true}
+      offset={-70}
+      duration={500}
+      onClick={() => {
+        if (window.location.pathname !== '/') {
+          window.location.href = '/#' + toId;
+          setTimeout(() => {
+            const element = document.getElementById(toId);
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
+          }, 100);
+        }
+      }}
+    >
+      <Typography
+        variant="h6"
+        sx={{
+          mx: 2,
+          color: '#e1e1e1',
+          textDecoration: 'none',
+          cursor: 'pointer'
+        }}
       >
-        <Typography
-          variant="h6"
-          sx={{
-            mx: 2,
-            color: '#e1e1e1',
-            textDecoration: 'none',
-            cursor: 'pointer'
-          }}
-        >
-          {text}
-        </Typography>
-      </ScrollLink>
-    );
+        {text}
+      </Typography>
+    </ScrollLink>
+  );
 };
 
 const handleClickResume = () => {
   const resumeUrl = "https://kvs-resume.s3.amazonaws.com/resume.pdf"
-  window.location.href = resumeUrl;
+  window.open(resumeUrl, "_blank");
 };
 
 const links = () => {
   return (
-    <>  
+    <>
       {navLink('intro', 'HOME')}
       {navLink('about', 'ABOUT')}
       {navLink('skills', 'SKILLS')}
       {/* {navLink('projects', 'PROJECTS')} */}
       {navLink('contact', 'CONTACT')}
-      
+
       <Typography
         variant="h6"
         component="a"
@@ -91,17 +91,17 @@ const links = () => {
 
 function NavBar() {
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down(1080));
-  
+
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const toggleDrawer = (event) => {
     if (
       event &&
       event.type === 'keydown' &&
       (event.key === 'Tab' || event.key === 'Shift')
-      ) { return; }
-      setIsDrawerOpen(!isDrawerOpen);
-    };
-    
+    ) { return; }
+    setIsDrawerOpen(!isDrawerOpen);
+  };
+
   const renderMobileMenu = () => {
     return (
       <>
@@ -112,13 +112,13 @@ function NavBar() {
           open={isDrawerOpen}
           onOpen={toggleDrawer}
           onClose={toggleDrawer}
-          >
+        >
           {links()}
         </SwipeableDrawer>
       </>
     );
   };
-  
+
   const renderDesktopMenu = () => {
     return (
       <Box sx={{ display: 'flex', alignItems: 'center' }}>

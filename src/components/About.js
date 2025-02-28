@@ -4,10 +4,9 @@ import Container from '@mui/material/Container';
 
 import book1 from '../assets/books/oil_power_and_war.jpg';
 import book2 from '../assets/books/loving_what_is.png';
-import book3 from '../assets/books/how_to_win_at_chess.png';
-import book4 from '../assets/books/cracking_the_coding_interview.png';
+import book3 from '../assets/books/foundation_and_empire.jpg';
 
-const books = [book1, book2, book3, book4]
+const books = [book1, book2, book3]
 
 function About() {
   return (
@@ -22,8 +21,11 @@ function About() {
     >
       <Typography variant='h2' textAlign='center'>About</Typography>
       <Box>
-        <Typography color='#e1e1e1'>
-          As a software developer with foundations in scientific computing and full-stack development, I combine expertise in JavaScript, Python, and C++ with analytical rigor. My experience includes scientific data analysis, optimizing simulations (95\% runtime reduction) and architecting cloud applications, with a personal focus on type safety, performance, and maintainability. Throughout my career I have balanced technical quality with clear communication to align solutions with team priorities and business requirements.
+        <Typography color='#e1e1e1' align="center">
+          Full-stack software developer with strong foundations in scientific computing, combining expertise in
+          JavaScript/TypeScript, React, Python, and C++ to deliver high-performance solutions. Experience architecting cloud
+          applications using AWS services and working with both SQL and NoSQL databases. Focused on delivering
+          maintainable, type-safe code while effectively communicating technical solutions to stakeholders.
         </Typography>
       </Box>
       <Box>
@@ -33,7 +35,7 @@ function About() {
           textAlign='center'
           sx={{ mt: '5vh' }}
         >
-          Books I'm Reading
+          Currently Reading
         </Typography>
         <Box
           display='flex'
