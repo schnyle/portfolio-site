@@ -4,20 +4,20 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
 // technology logos
-import aws_img from '../assets/technologies/aws.png'
-import bash_img from '../assets/technologies/bash.png'
-import c_img from '../assets/technologies/c.png'
-import cmake_img from '../assets/technologies/cmake.png'
+// import aws_img from '../assets/technologies/aws.png'
+// import bash_img from '../assets/technologies/bash.png'
+// import c_img from '../assets/technologies/c.png'
+// import cmake_img from '../assets/technologies/cmake.png'
 import cpp_img from '../assets/technologies/cpp.png'
 import css_img from '../assets/technologies/css.png'
 import dynamodb_img from '../assets/technologies/dynamodb.png'
 import github_img from '../assets/technologies/github2.png';
 import html_img from '../assets/technologies/html.png';
-import javascript_img from '../assets/technologies/javascript.png';
+// import javascript_img from '../assets/technologies/javascript.png';
 import lambda_img from '../assets/technologies/lambda.png'
 import matplotlib_img from '../assets/technologies/matplotlib.png'
 import numpy_img from '../assets/technologies/numpy.png';
-import oop_img from '../assets/technologies/oop.png'
+// import oop_img from '../assets/technologies/oop.png'
 import pandas_img from '../assets/technologies/pandas.png';
 import postgresql_img from '../assets/technologies/postgresql.png'
 import postman_img from '../assets/technologies/postman.png'
@@ -25,7 +25,7 @@ import python_img from '../assets/technologies/python.png';
 import rds_img from '../assets/technologies/rds.png'
 import react_img from '../assets/technologies/react.png';
 import redux_img from '../assets/technologies/redux.png'
-import s3_img from '../assets/technologies/s3.png'
+// import s3_img from '../assets/technologies/s3.png'
 import typescript_img from "../assets/technologies/typescript.png"
 import vscode_img from '../assets/technologies/vscode.png'
 import node_img from '../assets/technologies/node.png'

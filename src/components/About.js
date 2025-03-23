@@ -1,12 +1,7 @@
+import { getBooks } from '../helpers/getBooks';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-
-import book1 from '../assets/books/oil_power_and_war.jpg';
-import book2 from '../assets/books/loving_what_is.png';
-import book3 from '../assets/books/foundation_and_empire.jpg';
-
-const books = [book1, book2, book3]
+import Typography from '@mui/material/Typography';
 
 function About() {
   return (
@@ -44,7 +39,7 @@ function About() {
           alignItems='center'
           marginTop='32px'
         >
-          {books.map((book, index) => {
+          {getBooks().map((book, index) => {
             return (
               <div
                 style={{
