@@ -30,12 +30,7 @@ function Intro() {
           />
           <Box textAlign='center'>
             <Typography variant='h1'>Kyle Schneider</Typography>
-            <Typography variant='h2'>Software Developer</Typography>
-            <Typography>
-              I am a software developer with a passion for learning and creating. 
-              <br />
-              I use my background in mathematics and science to solve problems and build applications.
-            </Typography>
+            <Typography variant='h2'>Engineer of Software</Typography>
           </Box>
         </Container>
     );
